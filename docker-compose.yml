@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:80" # Map port 8000 on host to port 80 on container
     volumes:
-      - /var/www/html/gigalogy-test:/var/www/html # Mount the Laravel application directory into the container
+      - /var/www/html/g-test:/var/www/html # Mount the Laravel application directory into the container
     depends_on:
       - db # Depend on the db service for database connection
 
