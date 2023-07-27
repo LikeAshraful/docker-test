@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80" # Map port 8000 on host to port 80 on container
+    volumes:
+      - /var/www/html/gigalogy-test:/var/www/html # Mount the Laravel application directory into the container
+    depends_on:
+      - db # Depend on the db service for database connection
+
+  db:
+    build:
+      context: ./docker/postgres # Path to the directory containing the PostgreSQL Dockerfile
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Persist PostgreSQL data between container restarts
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=gigalogy
+
+volumes:
+  pgdata: # Named volume for PostgreSQL data persistence
