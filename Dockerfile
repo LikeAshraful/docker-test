@@ -17,11 +17,14 @@ RUN a2enmod rewrite
 COPY . .
 
 # Install Composer and dependencies
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer install
+RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN alias composer='php composer.phar'
+# RUN composer install
 
 # Set appropriate permissions for Laravel storage directory
 RUN chown -R www-data:www-data storage
+RUN chmod -R 777 /var/www/html/
+
 
 # Expose port 80 for Apache
 EXPOSE 80
