@@ -16,15 +16,17 @@ RUN a2enmod rewrite
 # Copy the Laravel application files to the container
 COPY . .
 
+COPY .env.example .env
+
 # Install Composer and dependencies
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN alias composer='php composer.phar'
-# RUN composer install
+RUN composer install
+
 
 # Set appropriate permissions for Laravel storage directory
-RUN chown -R www-data:www-data storage
-RUN chmod -R 777 /var/www/html/
-
+RUN chmod 777 -R /var/www/html/
+RUN chmod o+w ./storage/ -R
 
 # Expose port 80 for Apache
 EXPOSE 80
