@@ -21,7 +21,7 @@ COPY .env.example .env
 # Install Composer and dependencies
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN alias composer='php composer.phar'
-RUN composer install
+# RUN composer install
 
 
 # Set appropriate permissions for Laravel storage directory

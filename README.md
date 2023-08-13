@@ -17,6 +17,8 @@ docker-compose build
 </br>
 docker-compose up -d
 </br>
+composer install
+</br>
 sudo cp .env.example .env
 </br>
  sudo chmod o+w ./storage/ -R
