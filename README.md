@@ -6,9 +6,9 @@
 
 cd /var/www/html
 </br>
-git clone https://github.com/LikeAshraful/g-test.git
+git clone https://github.com/LikeAshraful/docker-test.git
 </br>
-cd g-test
+cd docker-test
 </br>
 
 <b>Build the Docker containers using Docker Compose:</b>
