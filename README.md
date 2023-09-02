@@ -1,30 +1,39 @@
+
+# Docker Test
+
 Repository for learning Docker with Laravel and PostgreSQL.
 
-## How to install
 
-<b>Clone the GitHub repository:</b>
+## Deployment
 
-cd /var/www/html
-</br>
-git clone https://github.com/LikeAshraful/docker-test.git
-</br>
-cd docker-test
-</br>
+Firstly, Go to Your local root Directory
 
-<b>Build the Docker containers using Docker Compose:</b>
+```bash
+  cd /var/www/html
+```
 
+Repository Clone 
+
+```bash
+  git clone https://github.com/LikeAshraful/docker-test.git
+```
+
+Now Go to the docker-test folder. 
+
+```bash
+  cd docker-test
+```
+
+Build the Docker containers using Docker Compose:
+
+```bash
 docker-compose build
-</br>
 docker-compose up -d
-</br>
 composer install
-</br>
 sudo cp .env.example .env
-</br>
- sudo chmod o+w ./storage/ -R
-</br>
+sudo chmod o+w ./storage/ -R
 npm install && npm run dev
-</br>
-finally visits site on http://localhost:8000/
+```
 
+Finally You are Done! Now You can visits site on http://localhost:8000/
 
