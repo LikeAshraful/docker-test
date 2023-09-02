@@ -1,4 +1,4 @@
-
+Repository for learning Docker with Laravel and PostgreSQL.
 
 ## How to install
 
