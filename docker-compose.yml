@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:80" # Map port 8000 on host to port 80 on container
     volumes:
-      - /var/www/html/g-test:/var/www/html # Mount the Laravel application directory into the container
+      - /var/www/html/docker-test:/var/www/html # Mount the Laravel application directory into the container
     depends_on:
       - db # Depend on the db service for database connection
 
@@ -19,7 +19,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=gigalogy
+      - POSTGRES_DB=docker_test
 
 volumes:
   pgdata: # Named volume for PostgreSQL data persistence
