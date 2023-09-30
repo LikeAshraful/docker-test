@@ -33,7 +33,8 @@ composer install
 sudo cp .env.example .env
 sudo chmod o+w ./storage/ -R
 npm install && npm run dev
+php artisan key:generate
 ```
 
-Finally You are Done! Now You can visits site on http://localhost:8000/
+Finally, You are Done! Now You can visit the site on http://localhost:8000/
 
