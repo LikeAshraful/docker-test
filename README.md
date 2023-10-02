@@ -38,5 +38,7 @@ npm install && npm run dev
 php artisan key:generate
 ```
 
-Finally, You are Done! Now You can visit the site on http://localhost:8000/
+Finally, You are Done! Now You can visit the site at http://localhost:8000/
+
+#### Feel free to fork this repository, experiment with the code, and adapt it to your own projects. Learning these technologies will empower you to build robust web applications with ease and efficiency.
 
