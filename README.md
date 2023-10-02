@@ -4,7 +4,7 @@
 ### Dive into Docker, Laravel, and PostgreSQL: Your Learning Repository
 
 Welcome to your repository for learning Docker with Laravel and PostgreSQL! In this comprehensive guide, we will take you on a journey through the world of containerization, web development with Laravel, and database management with PostgreSQL.
-
+Feel free to fork this repository, experiment with the code, and adapt it to your own projects. Learning these technologies will empower you to build robust web applications with ease and efficiency.
 
 ## Deployment
 
@@ -39,6 +39,4 @@ php artisan key:generate
 ```
 
 Finally, You are Done! Now You can visit the site at http://localhost:8000/
-
-#### Feel free to fork this repository, experiment with the code, and adapt it to your own projects. Learning these technologies will empower you to build robust web applications with ease and efficiency.
 
