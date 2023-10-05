@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
+    // Test route
     return DB::table('clients')->get();
 });
 
