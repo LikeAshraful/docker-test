@@ -14,6 +14,8 @@ services:
   db:
     build:
       context: ./docker/postgres # Path to the directory containing the PostgreSQL Dockerfile
+    ports:
+      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data # Persist PostgreSQL data between container restarts
     environment:
