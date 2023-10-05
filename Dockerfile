@@ -2,13 +2,13 @@
 FROM php:8.1-apache
 
 # Install system dependencies required for PDO and pgsql
-RUN apt-get update && apt-get install -y libpq-dev
+RUN apt-get update && apt-get install -y libpq-dev && docker-php-ext-install pdo pdo_pgsql
 
 # Set the working directory inside the container
 WORKDIR /var/www/html
 
 # Install PHP extensions required for Laravel
-RUN docker-php-ext-install pdo pgsql
+# RUN docker-php-ext-install pdo pgsql
 
 # Enable Apache mod_rewrite for Laravel URL rewriting
 RUN a2enmod rewrite
@@ -25,8 +25,7 @@ RUN alias composer='php composer.phar'
 
 
 # Set appropriate permissions for Laravel storage directory
-RUN chmod 777 -R /var/www/html/
-RUN chmod o+w ./storage/ -R
+RUN chmod 777 -R storage/
 
 # Expose port 80 for Apache
 EXPOSE 80
